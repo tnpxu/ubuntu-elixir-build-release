@@ -4,7 +4,7 @@ set -e
 
 cd /opt/build/build-elixir
 
-APP_NAME="tai"
+APP_NAME="$(grep 'app:' mix.exs | sed -e 's/\[//g' -e 's/ //g' -e 's/app://' -e 's/[:,]//g')"
 APP_VSN="$(grep 'version:' mix.exs | cut -d '"' -f2)"
 
 mkdir -p /opt/build/build-elixir/rel/artifacts

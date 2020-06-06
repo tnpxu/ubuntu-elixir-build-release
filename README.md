@@ -11,7 +11,7 @@ You can choose elixir or erlang version for this image by changing ```ERLANG_VER
 ## Run building script in container
 
 ```console
-$ docker run -v $(pwd):/opt/build/build-elixir --rm -it elixir-ubuntu:latest /opt/build/build-elixir/bin/build 
+$ docker run -v $(pwd):/opt/build/build-elixir --rm -it elixir-ubuntu:latest /opt/build/build-elixir/build 
 ```
 
 produced release tarball in ```rel/artifacts```
